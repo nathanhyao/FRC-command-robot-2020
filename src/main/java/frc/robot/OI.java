@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.AutonomousMove;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -16,10 +18,17 @@ import edu.wpi.first.wpilibj.XboxController;
 public class OI {
   private XboxController drivingControl = new XboxController(RobotMap.CONTROLLER);
   //status   class       instance          syntax            port
+  private JoystickButton xButton = new JoystickButton(drivingControl, RobotMap.X_BUTTON);
+  //status   class       instance          syntax     controller,     number
+  //You have to use instances; you can't just use a class
   public double GetDriverRawAxis(int axis) {
   //status; return-type; name; (axis number);
     return drivingControl.getRawAxis(axis);
     //  xboxController instance; method to get value of axis
+  }  
+
+  public OI() {
+    xButton.whenPressed(new AutonomousMove(3, 0.5, 0.5));
   }
 
   //// CREATING BUTTONS
