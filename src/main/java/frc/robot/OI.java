@@ -9,7 +9,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.commands.AutonomousMove;
+import frc.robot.commands.MoveByItselfSequence;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -28,7 +28,7 @@ public class OI {
   }  
 
   public OI() {
-    xButton.whenPressed(new AutonomousMove(3, 0.5, 0.5));
+    xButton.whenPressed(new MoveByItselfSequence());
   }
 
   //// CREATING BUTTONS

@@ -10,11 +10,11 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class AutonomousMove extends Command {
+public class MoveByItself extends Command {
 
   double moveTime, moveRightSpeed, moveLeftSpeed;
   
-  public AutonomousMove(double time, double rightSpeed, double leftSpeed) {
+  public MoveByItself(double time, double rightSpeed, double leftSpeed) {
     this.moveTime = time;
     this.moveRightSpeed = rightSpeed;
     this.moveLeftSpeed = leftSpeed;
