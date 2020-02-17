@@ -12,6 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.TankDrive;
 
 /**
  * Add your docs here.
@@ -29,6 +30,9 @@ public class ChassisDriveTrain extends Subsystem {
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+
+    setDefaultCommand(new TankDrive());
+
   }
 
   //creating method for controlling motors/actuators
