@@ -18,18 +18,18 @@ public class RobotMap {
   //CAN ID
   public static final int LEFT_1_ID = 1;
   public static final int LEFT_2_ID = 2;
-	public static final int RIGHT_1_ID = 3;
+  public static final int RIGHT_1_ID = 3;
   public static final int RIGHT_2_ID = 4;
   
   //port
   public static final int CONTROLLER = 0;
   
   //Controller Sticks
-	public static final int LEFT_STICK_Y = 1;
+  public static final int LEFT_STICK_Y = 1;
   public static final int RIGHT_STICK_Y = 5;
   
   //Controller Buttons
-	public static final int X_BUTTON = 3;
+  public static final int X_BUTTON = 3;
 
   // For example to map the left and right motors, you could define the
   // following variables to use with your drivetrain subsystem.
